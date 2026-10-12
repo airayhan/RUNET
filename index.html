@@ -1,1 +1,105 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUNET | Rajshahi University Network</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
+    }
+    header {
+      background: #102b52;
+      color: white;
+      padding: 22px 18px;
+    }
+    header h1 { margin: 0; font-size: 30px; }
+    header p { margin-bottom: 0; color: #dbeafe; }
+    main { max-width: 760px; margin: auto; padding: 22px 16px; }
+    .hero {
+      background: white;
+      border-radius: 16px;
+      padding: 24px 18px;
+      box-shadow: 0 4px 18px #102b5212;
+    }
+    .hero h2 { color: #102b52; margin-top: 0; }
+    input, select, button {
+      width: 100%;
+      padding: 13px;
+      margin-top: 10px;
+      border: 1px solid #ccd5e2;
+      border-radius: 9px;
+      font-size: 16px;
+    }
+    button {
+      background: #176b46;
+      color: white;
+      border: 0;
+      font-weight: bold;
+    }
+    .note {
+      margin-top: 18px;
+      padding: 14px;
+      background: #e8f2ff;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+    footer { text-align: center; padding: 24px; color: #667085; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RUNET</h1>
+    <p>Rajshahi University Network</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>রাজশাহী বিশ্ববিদ্যালয়ের শিক্ষার্থীদের মিলনমঞ্চ</h2>
+      <p>নিজের জেলা খুঁজে নাও, আর RU-এর বিভিন্ন জেলার শিক্ষার্থীদের সঙ্গে পরিচিত হওয়ার পথে এগিয়ে যাও।</p>
+
+      <label for="district">তোমার জেলা নির্বাচন করো</label>
+      <select id="district">
+        <option value="">জেলা নির্বাচন করো</option>
+        <option>বরগুনা</option>
+        <option>বরিশাল</option>
+        <option>ঢাকা</option>
+        <option>চট্টগ্রাম</option>
+        <option>কুমিল্লা</option>
+        <option>রাজশাহী</option>
+        <option>রংপুর</option>
+        <option>খুলনা</option>
+        <option>সিলেট</option>
+        <option>ময়মনসিংহ</option>
+      </select>
+
+      <button onclick="showDistrict()">জেলা নির্বাচন করুন</button>
+      <p id="result"></p>
+
+      <div class="note">
+        <strong>আমাদের লক্ষ্য</strong><br>
+        রাজশাহী বিশ্ববিদ্যালয়ের শিক্ষার্থীদের জেলা, বিভাগ ও আগ্রহের ভিত্তিতে একটি নিরাপদ নেটওয়ার্ক তৈরি করা।
+      </div>
+    </section>
+  </main>
+
+  <footer>RUNET © 2026 | Built for RU Students</footer>
+
+  <script>
+    function showDistrict() {
+      const district = document.getElementById("district").value;
+      const result = document.getElementById("result");
+      if (!district) {
+        result.textContent = "আগে তোমার জেলা নির্বাচন করো।";
+      } else {
+        result.textContent = "তুমি " + district + " জেলা নির্বাচন করেছ। শিক্ষার্থীদের তালিকা যুক্ত করার কাজ পরবর্তী ধাপে হবে।";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -103,5 +103,16 @@
       }
     }
   </script>
+  
+  <script>
+    const SUPABASE_URL = "https://qlyqwiexhuvkwhajarqa.supabase.co/rest/v1/";
+    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_6Gtl8PDq3fLXXl3zysSp-w_s6AGlXlR";
+
+    const supabaseClient = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_PUBLISHABLE_KEY
+    );
+  </script>
+
 </body>
 </html>
